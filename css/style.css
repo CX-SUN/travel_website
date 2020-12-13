@@ -6,11 +6,11 @@
     box-sizing: border-box;
 }
 
-html {
-    /* margin: 2rem; */
+/* html {
+    margin: 2rem;
     
-    /* border: dotted black; */
-}
+    border: dotted black; 
+} */
 
 body {
     margin: 1rem;
@@ -20,6 +20,7 @@ body {
 
 .header {
     /* background-color: #f8a5c2; */
+    position: relative;
     height: 85vh;
     /* margin: 1rem; */
     /* linear-gradient(to right bottom,rgba(255, 255, 255, 0.6),hsla(120, 46%, 89%, 0.6)), */
@@ -29,6 +30,36 @@ body {
     clip-path: polygon(0 0, 100% 0,100% 90%, 0 100%);
     /* border: dotted black; */
 }
+
+
+
+.header-logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.header-logo-pic{
+    height: 2.5rem;
+    /*
+    width will be adjusted automatically by the browser
+    */
+}
+
+.header-content{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    text-align: center; 
+
+    
+}
+/* .header-text {
+    text-align: center;
+
+} */
+
 
 .header-text-sub {
     font-family:'Lato',sans-serif;
@@ -51,10 +82,28 @@ body {
     letter-spacing: 1rem;
     font-weight: 800;
 }
-.header-text {
-    text-align: center;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+}
+
+.btn:hover{
+    transform: translateY(-0.2rem);
+}
+
+.btn:active {
+    transform: translateY(-0.1rem);
+}
+.btn-header{
+    display: inline-block;
+    margin: 1.6rem 0 0 0;
+    
+    background-color: white;
+    color: #7777;
+    padding: 0.8rem 1.2rem; 
+    border-radius: 500rem;
+    /* display: block;
+    margin: 0 auto;
+    width: 10rem;  */   
 }
