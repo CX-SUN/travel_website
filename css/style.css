@@ -24,7 +24,7 @@ body {
     height: 85vh;
     /* margin: 1rem; */
     /* linear-gradient(to right bottom,rgba(255, 255, 255, 0.6),hsla(120, 46%, 89%, 0.6)), */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),url(../img/kai-pilger--uQBxh6L5D4-unsplash.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.35),rgba(255, 255, 255, 0.35)),url(../img/kai-pilger--uQBxh6L5D4-unsplash.jpg);
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0,100% 90%, 0 100%);
@@ -47,14 +47,13 @@ body {
 }
 
 .header-content{
-    position: absolute;
+    position: absolute; 
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);   
     text-align: center; 
-
-    
 }
+
 /* .header-text {
     text-align: center;
 
@@ -90,20 +89,45 @@ body {
 
 .btn:hover{
     transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.24);
 }
 
 .btn:active {
     transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.24);
 }
 .btn-header{
+    position: relative;
     display: inline-block;
     margin: 1.6rem 0 0 0;
     
     background-color: white;
-    color: #7777;
+    color: rgba(119, 119, 119, 0.835);
     padding: 0.8rem 1.2rem; 
     border-radius: 500rem;
     /* display: block;
     margin: 0 auto;
-    width: 10rem;  */   
+    width: 10rem;  */  
+    
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100rem;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: -1; 
+    transition: all .4s;
+}
+
+.btn-header::after{
+    background-color: white;
+}
+.btn-header:hover::after{
+    transform: scaleX(1.8) scaleY(2.4) ;
+    opacity: 0;
 }
